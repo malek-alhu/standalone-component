@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SignupComponent } from './signup/signup.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, SignupComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'standalone';
