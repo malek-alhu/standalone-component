@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { select, State, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppRoutingModule } from './app-routing.module';
-import { SignupComponent } from './signup/signup.component';
 import { addUser } from './store/user.actions';
 import { User, userSelector, UserState } from './store/user.reducer';
 
@@ -16,7 +15,7 @@ import { User, userSelector, UserState } from './store/user.reducer';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'standalone';
+  title = 'esempio';
   users$ = this.store.select(userSelector);
 
   constructor(private store: Store<UserState>) {}
@@ -24,7 +23,7 @@ export class AppComponent {
   createUser() {
     const user: User = {
       userId: 1,
-      name: 'Subrat',
+      name: 'mario',
     };
     this.store.dispatch(addUser(user));
   }

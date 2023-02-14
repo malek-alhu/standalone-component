@@ -14,7 +14,7 @@ const initialState: User[] = [];
 
 export const userReducer = createReducer(
   initialState,
-  on(getUser, (state, { users }) => [...users]),
+
   on(addUser, (state, { user }) => [...state, user])
 );
 
@@ -22,3 +22,10 @@ export const userSelector = createSelector(
   (state: UserState) => state.users,
   (users) => users
 );
+
+
+
+
+
+
+

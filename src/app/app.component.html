@@ -1,8 +1,20 @@
 <div style="text-align: center;">
-  <h1>App Component</h1>
+
+  <h1>App</h1>
+  
+
+
   <button [routerLink]="['user']" (click)="createUser()">User</button>
-  <router-outlet></router-outlet>
+
   <div *ngFor="let user of users$ | async">
-    <h1>{{user.name}}</h1>
+    <li>
+      <h4>Nome: {{user.name}} , id: {{user.userId}}</h4>
+     
+    </li>
+   
+  </div>
+
+  <div style="background-color: #ffc">
+    <pre>users$: {{users$ | async | json}}</pre>
   </div>
 </div>
